@@ -19,15 +19,14 @@ public class PingPong implements Runnable {
         delay = cantMs;
     }
 
-    ;
- public void run() {
+    public void run() {
         for (int i = 1; i < delay * 10; i++) {
-            System.out.print(cadena + “ ”);
- try {
-                Thread.sleep(delay);
-            } catch (InterruptedException e) {
-                ...
-            }
+            System.out.println(cadena + " ");
+//            try {
+//                Thread.sleep(delay);
+//            } catch (InterruptedException e) {
+//
+//            }
         }
     } //fin método run()
 } //fin clase PingPong

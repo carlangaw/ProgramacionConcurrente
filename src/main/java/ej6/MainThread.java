@@ -3,16 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package ej6;
 
 /**
  *
  * @author Carla Nuñez
  */
-class ThreadTesting {
+public class MainThread {
 
     public static void main(String[] args) {
-        Thread miHilo = new MiEjecucion();
-        miHilo.start();
-        System.out.println("En el main");
+        Cliente cliente1 = new Cliente("Cliente 1", new int[]{2, 2, 1, 5, 2, 3});
+        Cliente cliente2 = new Cliente("Cliente 2", new int[]{1, 3, 5, 1, 1});
+
     }
 }

@@ -9,6 +9,16 @@ package EjercicioOb;
  *
  * @author Carla Nuñez
  */
-public class Dato {
-    
+class Dato {
+
+    private int valor;
+
+    void contar() {
+        valor = ++valor;
+    }
+
+    int obtenerValor() {
+        return valor;
+    }
+
 }
