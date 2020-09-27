@@ -22,11 +22,11 @@ public class PingPong implements Runnable {
     public void run() {
         for (int i = 1; i < delay * 10; i++) {
             System.out.println(cadena + " ");
-//            try {
-//                Thread.sleep(delay);
-//            } catch (InterruptedException e) {
-//
-//            }
+            try {
+                Thread.sleep(delay);
+            } catch (InterruptedException e) {
+
+            }
         }
     } //fin método run()
 } //fin clase PingPong
