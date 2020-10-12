@@ -16,7 +16,6 @@ public class Main {
         Thread cliente3 = new Thread(new Cliente("Peluson", unTaxi));
         Thread cliente1 = new Thread(new Cliente("Matias Gustavo Pucheta", unTaxi));
         Thread cliente2 = new Thread(new Cliente("Carla", unTaxi));
-
         Thread cliente4 = new Thread(new Cliente("Stuart", unTaxi));
         Thread taxista1 = new Thread(new Taxista("ABC", unTaxi));
         taxista1.start();
