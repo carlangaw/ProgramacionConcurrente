@@ -19,6 +19,14 @@ public class Confiteria {
     private Semaphore SemComida;
     private Semaphore BebidaEntregada;
     private int sillas;
+    public static final String NEGRO = "\u001B[30m";
+    public static final String ROJO = "\u001B[31m";
+    public static final String VERDE = "\u001B[32m";
+    public static final String AMARILLO = "\u001B[33m";
+    public static final String AZUL = "\u001B[34m";
+    public static final String PURPLE = "\u001B[35m";
+    public static final String CYAN = "\u001B[36m";
+    public static final String BLANCO = "\u001B[37m";
 
     public Confiteria() {
         //   semMesa = new Semaphore(1);
@@ -36,14 +44,14 @@ public class Confiteria {
             System.out.println("\u001B[32m El empleado:" + nom + " Se sienta el mesa ");
             entre = true;
             sillas--;
-          
+
         } else {
             System.out.println("\u001B[36m El empleado:" + nom + " No se pudo sentar, vuelve mas tarde ");
         }
         return entre;
     }
 
-    public void solicitarBebida(String nom) throws InterruptedException {
+    public synchronized void solicitarBebida(String nom) throws InterruptedException {
         SemMozo.release();
         System.out.println(nom + " : Solicita bebida");
         BebidaEntregada.acquire();
@@ -64,7 +72,7 @@ public class Confiteria {
     public synchronized void irse(String nom) {
         sillas++;
         System.out.println("\u001B[32m" + nom + ": Terminé, me voy ");
-      
+
     }
 
     public void atender(String nom) throws InterruptedException {
